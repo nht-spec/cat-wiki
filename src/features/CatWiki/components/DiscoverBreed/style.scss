@@ -5,8 +5,91 @@
 }
 
 .discover-control {
-	// height: 500px;
 	border-bottom-left-radius: 24px;
 	border-bottom-right-radius: 24px;
+	padding: 46px 107px 0 108px;
 	background-color: #e3e1dc;
+	font-family: 'Montserrat';
+	font-style: normal;
+
+	.discover-title {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 22px;
+		color: #291507;
+		margin-bottom: 8px;
+	}
+	.crossbar {
+		width: 59.18px;
+		height: 3.21px;
+		background: #4d270c;
+		margin-bottom: 36px;
+		border-radius: 77px;
+	}
+	.link-cat-list-control {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		h2 {
+			width: 536.93px;
+			font-weight: bold;
+			color: #291507;
+			font-size: 48px;
+			line-height: 59px;
+		}
+		.link-to-cat-list {
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+			text-decoration: unset;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 22px;
+			color: rgba(41, 21, 7, 0.6);
+			.material-icons-round {
+				color: #7f736a;
+				font-size: 18px;
+				margin-left: 9px;
+			}
+		}
+	}
+
+	.breed-list-control {
+		display: flex;
+		margin-top: 46px;
+		justify-content: space-between;
+		position: relative;
+		align-items: center;
+		padding-bottom: 100px;
+		.rectangle {
+			position: absolute;
+			width: 46.96px;
+			height: 174.62px;
+			background: #dec68b;
+			border-radius: 14px;
+			left: -15px;
+			top: 20px;
+			z-index: 0;
+		}
+		.breed-list {
+			z-index: 1;
+			.breed-image {
+				width: 220px;
+				height: 220px;
+				.image {
+					width: 100%;
+					height: 100%;
+					border-radius: 24px;
+					object-fit: cover;
+				}
+			}
+			.breed-name {
+				margin-top: 20px;
+				font-weight: 600;
+				font-size: 18px;
+				line-height: 22px;
+				color: #291507;
+			}
+		}
+	}
 }

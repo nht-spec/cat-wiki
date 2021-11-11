@@ -16,13 +16,19 @@ function DiscoverBreed({ valueOfBreed }) {
 					<span class='material-icons-round'>arrow_right_alt</span>
 				</Link>
 			</div>
-			<div>
+
+			<div className='breed-list-control'>
+				<div className='rectangle'></div>
 				{valueOfBreed.data?.map(
 					(list, idx) =>
 						idx < 4 && (
-							<ul key={idx}>
-								<img src={list.image.url} alt='' />
-							</ul>
+							<div className='breed-list' key={idx}>
+								<div className='breed-image'>
+									<img className='image' src={list.image.url} alt='' />
+								</div>
+
+								<p className='breed-name'>{list.name}</p>
+							</div>
 						)
 				)}
 			</div>
