@@ -1,0 +1,33 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.search-control {
+	position: relative;
+	padding-bottom: 120px;
+	.input-field-search {
+		width: 394.62px;
+		height: 69.67px;
+		background: #ffffff;
+		border-radius: 59px;
+		display: flex;
+		align-items: center;
+		padding-left: 28.6px;
+		padding-right: 27.27px;
+		justify-content: space-between;
+		.material-icons {
+			color: #291507;
+			font-size: 17px;
+		}
+	}
+	.option-name-list {
+		width: 394.62px;
+		max-height: 219.72px;
+		position: absolute;
+		background-color: white;
+		color: black;
+		overflow-y: auto;
+	}
+}
