@@ -39,11 +39,19 @@
 			display: flex;
 			align-items: center;
 			height: 56.16px;
-			margin-top: 10px;
+			margin: 10px;
 			.name-text {
 				padding-left: 9.16px;
 				list-style-type: unset;
+				width: 100%;
+				height: auto;
 			}
+		}
+		.name-text-notfault {
+			margin: 20px;
+			color: #ab003c;
+			font-weight: 700;
+			font-family: 'Roboto';
 		}
 		.option-name:hover {
 			cursor: pointer;

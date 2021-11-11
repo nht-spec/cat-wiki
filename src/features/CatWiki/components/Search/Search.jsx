@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import InputField from '../../../../components/formControl/InputField/InputField';
 import useCatBreed from '../../hooks/useCatBreed';
 import './style.scss';
@@ -7,11 +8,38 @@ Search.propTypes = {};
 function Search({ valueOfBreed }) {
 	const [placeholder, setPlaceHolder] = useState('Enter your breed');
 	const [isForcus, setIsForcus] = useState(false);
+	const [valueOfInput, setValueOfInput] = useState('');
+	const [newListOfSort, setNewListOfSort] = useState([]);
+	const history = useHistory();
 	const { breed } = useCatBreed();
+
 	const handlechange = (value) => {
+		setValueOfInput(value);
 		value && setIsForcus(true);
 		!value && setIsForcus(false);
 	};
+
+	const hanleClick = (id) => {
+		history.push(`/cat/${id}`);
+	};
+
+	useEffect(() => {
+		let sortValue = [];
+		breed.data &&
+			breed.data.forEach((value) => {
+				const valueinputLow = valueOfInput.toLowerCase();
+				const nameLow = value.name.trim().toLowerCase();
+
+				if (nameLow.indexOf(valueinputLow) > -1) {
+					sortValue.push(value);
+				}
+			});
+		setNewListOfSort(sortValue);
+	}, [valueOfInput, breed]);
+
+	useEffect(() => {
+		window.innerWidth <= 768 && setPlaceHolder('Search');
+	}, []);
 
 	useEffect(() => {
 		valueOfBreed && valueOfBreed(breed);
@@ -26,11 +54,18 @@ function Search({ valueOfBreed }) {
 
 			<div className='option-name-list'>
 				{isForcus &&
-					breed.data?.map((list) => (
-						<ul className='option-name' key={list.id}>
+					newListOfSort.map((list) => (
+						<ul
+							onClick={() => hanleClick(list.id)}
+							className='option-name'
+							key={list.id}
+						>
 							<li className='name-text'>{list.name}</li>
 						</ul>
 					))}
+				{valueOfInput && newListOfSort.length === 0 && (
+					<p className='name-text-notfault'>No results found!!</p>
+				)}
 			</div>
 		</div>
 	);
