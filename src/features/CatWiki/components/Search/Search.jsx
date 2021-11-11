@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import InputField from '../../../../components/formControl/InputField/InputField';
 import useCatBreed from '../../hooks/useCatBreed';
 import './style.scss';
 Search.propTypes = {};
 
-function Search(props) {
+function Search({ valueOfBreed }) {
 	const [placeholder, setPlaceHolder] = useState('Enter your breed');
 	const [isForcus, setIsForcus] = useState(false);
 	const { breed } = useCatBreed();
@@ -13,7 +13,10 @@ function Search(props) {
 		!value && setIsForcus(false);
 	};
 
-	console.log(breed);
+	useEffect(() => {
+		valueOfBreed && valueOfBreed(breed);
+	}, [breed, valueOfBreed]);
+
 	return (
 		<div className='search-control'>
 			<div className='input-field-search'>
@@ -24,8 +27,8 @@ function Search(props) {
 			<div className='option-name-list'>
 				{isForcus &&
 					breed.data?.map((list) => (
-						<ul key={list.id}>
-							<li>{list.name}</li>
+						<ul className='option-name' key={list.id}>
+							<li className='name-text'>{list.name}</li>
 						</ul>
 					))}
 			</div>

@@ -23,11 +23,35 @@
 		}
 	}
 	.option-name-list {
+		margin-top: 16.75px;
 		width: 394.62px;
 		max-height: 219.72px;
 		position: absolute;
 		background-color: white;
+		border-radius: 24px;
 		color: black;
 		overflow-y: auto;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		.option-name {
+			width: 360.01px;
+			margin-left: 11.29px;
+			display: flex;
+			align-items: center;
+			height: 56.16px;
+			margin-top: 10px;
+			.name-text {
+				padding-left: 9.16px;
+				list-style-type: unset;
+			}
+		}
+		.option-name:hover {
+			cursor: pointer;
+			background: rgba(151, 151, 151, 0.1);
+			border-radius: 12px;
+		}
+	}
+	.option-name-list::-webkit-scrollbar {
+		display: none;
 	}
 }

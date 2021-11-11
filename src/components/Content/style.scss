@@ -8,13 +8,14 @@
 	margin: 0 96px;
 	.content-list {
 		background-color: #050709;
-		border-radius: 24px;
+		border-top-left-radius: 24px;
 		font-style: normal;
 		color: #ffffff;
 		display: flex;
 		position: relative;
 		.text-content {
 			padding-top: 119.22px;
+			z-index: 2;
 			padding-left: 102px;
 			width: 394.62px;
 			.logo-content {
@@ -52,6 +53,7 @@
 			background-size: cover;
 			background-position: right;
 			height: auto;
+			border-top-right-radius: 24px;
 			background-image: url(./backgroudcat.png);
 			background-position-y: -233px;
 			background-repeat: no-repeat;
