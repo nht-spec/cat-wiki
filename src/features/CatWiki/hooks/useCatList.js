@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react';
 import catApi from '../../../api/catApi';
 
-export default function useCatBreed() {
-	const [breed, setBreed] = useState({});
+export default function useCatList(params) {
+	const [list, setList] = useState({});
 	const [loading, setLoading] = useState(false);
+
 	useEffect(() => {
 		(async () => {
 			setLoading(true);
-			const result = await catApi.getAllBreed();
-			setBreed(result);
+			const result = await catApi.getAllBreed(params);
+			setList(result);
 		})();
 		setLoading(false);
 	}, []);
-	return { breed, loading };
+	return {
+		list,
+		loading,
+	};
 }
