@@ -8,7 +8,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import InputField from '../../../../components/formControl/InputField/InputField';
 import useCatBreed from '../../hooks/useCatBreed';
-
+import './style.scss';
 function SearchDialogMobile({ isForcus, isClose }) {
 	const [open, setOpen] = React.useState(false);
 	const [placeholder, setPlaceHolder] = useState('Enter your breed');
@@ -52,17 +52,21 @@ function SearchDialogMobile({ isForcus, isClose }) {
 	}, [open, isClose]);
 	return (
 		<>
-			<Dialog fullScreen open={isForcus} onClose={handleClose}>
-				<AppBar sx={{ position: 'relative' }}>
-					<Toolbar>
-						<IconButton edge='start' onClick={handleClose}>
-							<CloseIcon />
-						</IconButton>
-					</Toolbar>
-				</AppBar>
+			<Dialog
+				className='dialog-control'
+				fullScreen
+				open={isForcus}
+				onClose={handleClose}
+			>
+				<Toolbar className='tool-bar-control'>
+					<IconButton className='btn-close' onClick={handleClose}>
+						<CloseIcon />
+					</IconButton>
+				</Toolbar>
+
 				<List>
-					<div className='search-control'>
-						<div className='input-field-search'>
+					<div className='search-control-mobile'>
+						<div className='input-field-search-mobile'>
 							<InputField
 								handlechange={handlechange}
 								placeholder={placeholder}
@@ -70,16 +74,16 @@ function SearchDialogMobile({ isForcus, isClose }) {
 							<span className='material-icons'>search</span>
 						</div>
 
-						<div className='option-name-list'>
+						<div className='option-name-list-mobile'>
 							{isChange &&
 								newListOfSort.map((list) => (
-									<ul
+									<div
 										onClick={() => hanleClick(list.id, list.reference_image_id)}
 										className='option-name'
 										key={list.id}
 									>
-										<li className='name-text'>{list.name}</li>
-									</ul>
+										<div className='name-text'>{list.name}</div>
+									</div>
 								))}
 							{valueOfInput && newListOfSort.length === 0 && (
 								<p className='name-text-notfault'>No results found!!</p>

@@ -1,0 +1,56 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.tool-bar-control {
+	justify-content: flex-end !important;
+	.btn-close {
+		width: 40px;
+		height: 40px;
+		background: rgba(151, 151, 151, 0.1);
+		border-radius: 8px;
+		color: #291507 !important;
+	}
+}
+.search-control-mobile {
+	margin: 30px 18px 0 18px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	.input-field-search-mobile {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 45.51px;
+		border: 1px solid #000000;
+		box-sizing: border-box;
+		border-radius: 59px;
+		padding: 2px 21px 2px 21px;
+		.material-icons {
+			font-size: 17px;
+			color: #291507;
+		}
+	}
+	.option-name-list-mobile {
+		margin-top: 37.4px;
+
+		.option-name {
+			width: 100%;
+			height: 56.16px;
+			display: flex;
+			padding-left: 20px;
+			align-items: center;
+			.name-text {
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 22px;
+				color: #000000;
+			}
+		}
+		.option-name:hover {
+			background: rgba(151, 151, 151, 0.1);
+			border-radius: 12px;
+		}
+	}
+}
