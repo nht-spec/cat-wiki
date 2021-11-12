@@ -6,3 +6,8 @@
 .detail-cat {
 	display: flex;
 }
+@media all and (max-width: 768px) {
+	.detail-cat {
+		flex-direction: column;
+	}
+}

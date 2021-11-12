@@ -36,3 +36,18 @@
 		}
 	}
 }
+@media all and (max-width: 768px) {
+	.other-image-control {
+		margin: auto;
+		margin-top: 40px;
+		padding: 0 18px 80px 18px;
+		width: 100%;
+		.image-cat-list {
+			width: 100%;
+			.image-cat {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+}
