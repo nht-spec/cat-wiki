@@ -6,8 +6,6 @@ import DetailPage from './pages/DetailPage/DetailPage';
 import HomePage from './pages/HomePage/HomePage';
 import ListPage from './pages/ListPage/ListPage';
 
-CatFeature.propTypes = {};
-
 function CatFeature() {
 	return (
 		<div>

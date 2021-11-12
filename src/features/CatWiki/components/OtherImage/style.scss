@@ -1,0 +1,38 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.other-image-control {
+	margin: 80.22px 96px 273px 96px;
+	.text-title {
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 44px;
+		margin-bottom: 40px;
+		color: #291507;
+	}
+	.image-cat-list {
+		display: flex;
+		width: 1250px;
+		height: 609px;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-content: space-between;
+		.image-cat {
+			width: 278px;
+			height: 278px;
+
+			.image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				border-radius: 24px;
+			}
+		}
+	}
+}
