@@ -5,7 +5,7 @@
 }
 
 .other-image-control {
-	margin: 80.22px 96px 273px 96px;
+	margin: 80.22px 96px 100px 96px;
 	.text-title {
 		font-family: 'Montserrat';
 		font-style: normal;
@@ -18,7 +18,7 @@
 	.image-cat-list {
 		display: flex;
 		width: 1250px;
-		height: 609px;
+		height: auto;
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -26,7 +26,7 @@
 		.image-cat {
 			width: 278px;
 			height: 278px;
-
+			margin-bottom: 53.08px;
 			.image {
 				width: 100%;
 				height: 100%;

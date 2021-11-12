@@ -1,11 +1,10 @@
 import React from 'react';
 import useCatList from '../../hooks/useCatList';
 import './style.scss';
-ListPage.propTypes = {};
 
 function ListPage(props) {
-	const { list, loading } = useCatList({ limit: 10 });
-	console.log(list);
+	const { list } = useCatList({ limit: 10 });
+
 	return (
 		<div className='detail-page-control'>
 			<h2 className='title-text-detail'>Top 10 most searched breeds</h2>
