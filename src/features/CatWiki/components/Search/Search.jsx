@@ -19,8 +19,8 @@ function Search({ valueOfBreed }) {
 		!value && setIsForcus(false);
 	};
 
-	const hanleClick = (id) => {
-		history.push(`/cat/${id}`);
+	const hanleClick = (id, imageId) => {
+		history.push(`/cat/${id}/${imageId}`);
 	};
 
 	useEffect(() => {
@@ -56,7 +56,7 @@ function Search({ valueOfBreed }) {
 				{isForcus &&
 					newListOfSort.map((list) => (
 						<ul
-							onClick={() => hanleClick(list.id)}
+							onClick={() => hanleClick(list.id, list.reference_image_id)}
 							className='option-name'
 							key={list.id}
 						>

@@ -13,8 +13,10 @@
 	line-height: 22px;
 	color: #291507;
 }
-input:focus-visible {
+input {
 	width: 100%;
 	height: 100%;
+}
+input:focus-visible {
 	outline: unset;
 }

@@ -13,7 +13,7 @@ function DiscoverBreed({ valueOfBreed }) {
 
 				<Link className='link-to-cat-list' to='/catList'>
 					see more
-					<span class='material-icons-round'>arrow_right_alt</span>
+					<span className='material-icons-round'>arrow_right_alt</span>
 				</Link>
 			</div>
 

@@ -16,9 +16,9 @@ const catApi = {
 		return axiosApi.get(url, { params });
 	},
 
-	getImage(params) {
-		const url = `/v1/images`;
-		return axiosApi.get(url, { params });
+	getImage(imgId) {
+		const url = `/v1/images/${imgId}`;
+		return axiosApi.get(url);
 	},
 };
 

@@ -16,7 +16,7 @@ function CatFeature() {
 				<Redirect from='/' to='/home' exact />
 				<Route path='/catList' exact component={ListPage} />
 				<Route path='/home' exact component={HomePage} />
-				<Route path='/cat/:breedId' exact component={DetailPage} />
+				<Route path='/cat/:breedId/:imageId' exact component={DetailPage} />
 			</Switch>
 			<Footer />
 		</div>
