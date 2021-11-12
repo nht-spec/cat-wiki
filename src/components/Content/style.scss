@@ -65,7 +65,9 @@
 @media all and (max-width: 768px) {
 	.content-control {
 		width: 100%;
-		margin: 0 18px;
+		margin: auto;
+		padding: 0 18px;
+
 		.content-list {
 			.text-content {
 				width: 135.92px;
