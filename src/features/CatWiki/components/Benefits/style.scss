@@ -61,22 +61,22 @@
 		flex-direction: row;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		position: relative;
 
 		.image-cat-one {
+			display: flex;
 			width: 273.52px;
 			height: 167.08px;
+			flex-direction: column;
+			align-items: flex-end;
 		}
 		.image-cat-two {
 			width: 238.47px;
 			height: 385.87px;
 		}
 		.image-cat-three {
-			position: absolute;
-			top: 195.94px;
+			margin-top: 18px;
 			width: 195.49px;
 			height: 293.24px;
-			right: 265.48px;
 		}
 		.img {
 			width: 100%;
@@ -91,7 +91,9 @@
 	.benefits-control {
 		margin: 63.72px 0 0 0;
 		width: 100%;
+		padding: 0 18px;
 		flex-direction: column;
+		position: unset;
 		.benefit-info {
 			width: 339px;
 			.cross-bar {
@@ -122,10 +124,11 @@
 			padding-bottom: 200px;
 			width: 100%;
 			margin-left: unset;
-
+			flex-wrap: nowrap;
 			.image-cat-one {
 				width: 172.03px;
 				height: 105.09px;
+				margin-right: 17px;
 			}
 			.image-cat-two {
 				width: 149.98px;
@@ -134,8 +137,6 @@
 			.image-cat-three {
 				width: 122.95px;
 				height: 184.43px;
-				right: 202px;
-				top: 123px;
 			}
 		}
 	}
