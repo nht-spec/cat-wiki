@@ -3,6 +3,7 @@ import Search from '../../features/CatWiki/components/Search/Search';
 import './style.scss';
 import './backgroudcat.png';
 import DiscoverBreed from '../../features/CatWiki/components/DiscoverBreed/DiscoverBreed';
+import Benefits from '../../features/CatWiki/components/Benefits/Benefits';
 Content.propTypes = {};
 
 function Content(props) {
@@ -27,6 +28,7 @@ function Content(props) {
 				<div className='backgroud-image' />
 			</div>
 			<DiscoverBreed valueOfBreed={valueOfBreed} />
+			<Benefits />
 		</div>
 	);
 }

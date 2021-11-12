@@ -1,0 +1,87 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.benefits-control {
+	margin: 100px 107px 0 108px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	color: #291507;
+	display: flex;
+	height: 488px;
+	justify-content: space-between;
+
+	.benefit-info {
+		width: 455.46px;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: center;
+
+		.cross-bar {
+			width: 59.18px;
+			height: 3.21px;
+			background: #4d270c;
+			border-radius: 77px;
+			margin-bottom: 19.63px;
+		}
+		.text-title {
+			font-weight: bold;
+			font-size: 48px;
+			line-height: 59px;
+			margin-bottom: 41.02px;
+		}
+		.text-desc {
+			font-weight: 500;
+			font-size: 18px;
+			margin-bottom: 42px;
+			line-height: 22px;
+		}
+
+		.link-to-benefit {
+			color: rgba(41, 21, 7, 0.6);
+			text-decoration: unset;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 22px;
+			display: flex;
+			align-items: center;
+			text-transform: uppercase;
+			.material-icons-round {
+				margin-left: 14px;
+			}
+		}
+	}
+	.benefit-image-list {
+		margin-left: 38.54px;
+		width: 539px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		position: relative;
+		.image-cat-one {
+			width: 273.52px;
+			height: 167.08px;
+		}
+		.image-cat-two {
+			width: 238.47px;
+			height: 385.87px;
+		}
+		.image-cat-three {
+			position: absolute;
+			top: 195.94px;
+			width: 195.49px;
+			height: 293.24px;
+			right: 265.48px;
+		}
+		.img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 24px;
+		}
+	}
+}
