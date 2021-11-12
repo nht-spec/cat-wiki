@@ -56,3 +56,39 @@
 		}
 	}
 }
+
+@media all and (max-width: 768px) {
+	.detail-page-control {
+		width: 100%;
+		margin: 0 18px;
+		.title-text-detail {
+			font-size: 32px;
+		}
+		.box-detail-info {
+			padding-bottom: 70px;
+
+			.list-info-cat {
+				margin-right: 18px;
+
+				flex-direction: column;
+				align-items: unset;
+				.cat-image {
+					width: 100%;
+					height: auto;
+				}
+				.info-text-cat {
+					margin-left: unset;
+					width: 100%;
+					.name-cat-text-index {
+						font-size: 25px;
+						margin-top: 10px;
+						line-height: 22px;
+					}
+					.text-desc {
+						font-size: 16px;
+					}
+				}
+			}
+		}
+	}
+}

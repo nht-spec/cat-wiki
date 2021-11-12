@@ -14,7 +14,7 @@ function Benefits(props) {
 				</p>
 				<Link className='link-to-benefit' to='/benefit'>
 					Benefits
-					<span class='material-icons-round'>arrow_right_alt</span>
+					<span className='material-icons-round'>arrow_right_alt</span>
 				</Link>
 			</div>
 

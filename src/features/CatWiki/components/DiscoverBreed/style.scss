@@ -93,3 +93,50 @@
 		}
 	}
 }
+@media all and (max-width: 768px) {
+	.discover-control {
+		padding: 18.19px 29px 53.56px 24.09px;
+		.discover-title {
+			font-size: 12px;
+			line-height: 15px;
+			margin-bottom: 5.7px;
+		}
+		.crossbar {
+			width: 40.89px;
+			height: 3px;
+			margin-bottom: 17.27px;
+		}
+		.link-cat-list-control {
+			h2 {
+				font-size: 18px;
+				line-height: 22px;
+				width: 185.12px;
+			}
+			.link-to-cat-list {
+				font-size: 12px;
+			}
+		}
+		.breed-list-control {
+			margin-top: 26.05px;
+			flex-wrap: wrap;
+			flex-direction: row;
+			padding-bottom: unset;
+			.rectangle {
+				width: 32.21px;
+				height: 105.29px;
+				left: -5px !important;
+			}
+			.breed-list {
+				.breed-image {
+					width: 134.77px;
+					height: 134.77px;
+				}
+				.breed-name {
+					font-size: 12px;
+					line-height: 15px;
+					margin-bottom: 18.32px;
+				}
+			}
+		}
+	}
+}

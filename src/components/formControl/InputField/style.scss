@@ -20,3 +20,9 @@ input {
 input:focus-visible {
 	outline: unset;
 }
+@media all and (max-width: 768px) {
+	.input-field {
+		font-size: 12px;
+		line-height: 15px;
+	}
+}

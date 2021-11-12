@@ -6,8 +6,9 @@ InputField.propTypes = {
 	placeholder: PropTypes.string,
 };
 
-function InputField({ placeholder, handlechange, handleclick }) {
+function InputField({ placeholder, handlechange, handleclick, IsForcus }) {
 	const [isClick, setIsClick] = useState(false);
+	const [isForcus, setIsForcus] = useState(false);
 	const handleChange = (value) => {
 		const name = value.target.value;
 		handlechange && handlechange(name);
@@ -17,16 +18,19 @@ function InputField({ placeholder, handlechange, handleclick }) {
 		handleclick && handleclick(isClick);
 	}, [isClick, handleclick]);
 
+	useEffect(() => {
+		IsForcus && IsForcus(isForcus);
+	}, [IsForcus, isForcus]);
+
 	return (
-		<div>
-			<input
-				onClick={() => setIsClick(!isClick)}
-				className='input-field'
-				onChange={handleChange}
-				type='text'
-				placeholder={placeholder}
-			/>
-		</div>
+		<input
+			onFocus={() => setIsForcus(true)}
+			onClick={() => setIsClick(!isClick)}
+			className='input-field'
+			onChange={handleChange}
+			type='text'
+			placeholder={placeholder}
+		/>
 	);
 }
 

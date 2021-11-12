@@ -3,7 +3,6 @@ import './style.scss';
 OtherImage.propTypes = {};
 
 function OtherImage({ listImage }) {
-	console.log(listImage);
 	return (
 		<div className='other-image-control'>
 			<h2 className='text-title'>Other photos</h2>

@@ -6,7 +6,7 @@ import DiscoverBreed from '../../features/CatWiki/components/DiscoverBreed/Disco
 import Benefits from '../../features/CatWiki/components/Benefits/Benefits';
 Content.propTypes = {};
 
-function Content(props) {
+function Content() {
 	const [valueOfBreed, setValueOfBreed] = useState([]);
 
 	return (

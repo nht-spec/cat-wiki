@@ -63,3 +63,19 @@
 		display: none;
 	}
 }
+@media all and (max-width: 768px) {
+	.search-control {
+		padding-bottom: 26px;
+		.input-field-search {
+			width: 91.62px;
+			height: 30.7px;
+			padding-left: 13.03px;
+			padding-right: 10.32px;
+
+			.material-icons {
+				color: #291507;
+				font-size: 10px;
+			}
+		}
+	}
+}

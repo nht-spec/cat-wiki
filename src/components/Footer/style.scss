@@ -55,3 +55,40 @@
 		}
 	}
 }
+@media all and (max-width: 768px) {
+	.fixed {
+		width: 100%;
+		padding: 0 18px;
+		.list-content {
+			width: 100%;
+			margin: unset;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			.logo {
+				padding: 30.17px 0 14.35px 29px;
+				margin-left: unset;
+				.text-logo {
+					font-size: 14px;
+					line-height: 19px;
+				}
+				.image-logo {
+					width: 24.29px;
+					height: 19.6px;
+				}
+			}
+			.text-content {
+				margin-bottom: 14.35px;
+				padding-right: 17px;
+				.text-one {
+					font-size: 24px;
+					line-height: 29px;
+					margin-left: 29px;
+				}
+				.text-two {
+					font-size: 12px;
+					line-height: 15px;
+				}
+			}
+		}
+	}
+}
