@@ -60,7 +60,8 @@
 @media all and (max-width: 768px) {
 	.detail-page-control {
 		width: 100%;
-		margin: 0 18px;
+		margin: auto;
+		padding: 18px;
 		.title-text-detail {
 			font-size: 32px;
 		}
@@ -68,8 +69,6 @@
 			padding-bottom: 70px;
 
 			.list-info-cat {
-				margin-right: 18px;
-
 				flex-direction: column;
 				align-items: unset;
 				.cat-image {
