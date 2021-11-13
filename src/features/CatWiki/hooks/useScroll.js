@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 export function useScroll() {
-	const [lastScrollTop, setLastScrollTop] = useState(0);
+	const [lastScrollTop, setLastScrollTop] = useState(10);
 	const [bodyOffset, setBodyOffset] = useState(
 		document.body.getBoundingClientRect()
 	);
@@ -16,6 +16,7 @@ export function useScroll() {
 		setScrollDirection(lastScrollTop > -bodyOffset.top ? 'down' : 'up');
 		setLastScrollTop(-bodyOffset.top);
 	};
+	console.log(-bodyOffset.top);
 
 	useEffect(() => {
 		window.addEventListener('scroll', listener);
