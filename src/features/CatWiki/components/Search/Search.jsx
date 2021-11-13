@@ -53,35 +53,6 @@ function Search({ valueOfBreed }) {
 
 	return (
 		<>
-			{!isForcus && placeholder === 'Search' && (
-				<div className='search-control'>
-					<div className='input-field-search'>
-						<InputField
-							placeholder={placeholder}
-							handlechange={handlechange}
-							IsForcus={setIsForcus}
-						/>
-						<span className='material-icons'>search</span>
-					</div>
-
-					<div className='option-name-list'>
-						{isChange &&
-							newListOfSort.map((list) => (
-								<ul
-									onClick={() => hanleClick(list.id, list.reference_image_id)}
-									className='option-name'
-									key={list.id}
-								>
-									<li className='name-text'>{list.name}</li>
-								</ul>
-							))}
-						{valueOfInput && newListOfSort.length === 0 && (
-							<p className='name-text-notfault'>No results found!!</p>
-						)}
-					</div>
-				</div>
-			)}
-
 			{placeholder !== 'Search' && (
 				<div className='search-control'>
 					<div className='input-field-search'>
@@ -110,7 +81,7 @@ function Search({ valueOfBreed }) {
 					</div>
 				</div>
 			)}
-			{isForcus && placeholder === 'Search' && (
+			{placeholder === 'Search' && (
 				<SearchDialogMobile isForcus={isForcus} isClose={setIsClose} />
 			)}
 		</>
