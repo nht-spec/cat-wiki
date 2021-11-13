@@ -1,40 +1,38 @@
-.skeletion-control {
+.skeletion-list {
 	display: flex;
-	margin-top: 46px;
-	justify-content: space-between;
-	position: relative;
+	margin-bottom: 55px;
 	align-items: center;
-	padding-bottom: 100px;
-	.steletion-list {
-		.skeletion-one {
-			border-radius: 24px;
-			width: 220px !important;
-			height: 220px !important;
-			margin-bottom: 10px;
-		}
+	.skeletion-one {
+		width: 170px;
+		height: 170px;
+		border-radius: 24px;
+		margin-right: 46px;
+	}
+	.list-info {
+		width: 100%;
+
 		.skeletion-two {
-			margin-left: 10px;
-			width: 150px !important;
+			height: 44px;
+			margin-bottom: 24px;
 		}
 	}
 }
-
 @media all and (max-width: 768px) {
-	.skeletion-control {
-		width: 100%;
-		padding-bottom: unset;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		.steletion-list {
-			margin-bottom: 18.32px;
-			.skeletion-one {
-				width: 134.77px !important;
-				height: 134.77px !important;
-			}
+	.skeletion-list {
+		flex-direction: column;
+		align-items: unset;
+		.skeletion-one {
+			width: 100%;
+			height: 300px;
+		}
+		.list-info {
+			width: 100%;
+			padding-left: 10px;
+
 			.skeletion-two {
-				width: 70px !important;
+				margin-top: 20px;
+				height: 30px;
+				margin-bottom: 10px;
 			}
 		}
 	}

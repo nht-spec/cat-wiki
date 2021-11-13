@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CatSkeletonList from '../CatSkeletonList/CatSkeletonList';
+import CatSkeletonDiscover from '../CatSkeletonDiscover/CatSkeletonDiscover';
 import './style.scss';
 
 function DiscoverBreed({ valueOfBreed, loading }) {
@@ -20,7 +20,7 @@ function DiscoverBreed({ valueOfBreed, loading }) {
 
 			{loading && (
 				<div className='breed-list-control-loading'>
-					<CatSkeletonList />
+					<CatSkeletonDiscover />
 				</div>
 			)}
 

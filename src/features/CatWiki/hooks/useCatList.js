@@ -10,8 +10,8 @@ export default function useCatList(params) {
 			setLoading(true);
 			const result = await catApi.getAllBreed(params);
 			setList(result);
+			setLoading(false);
 		})();
-		setLoading(false);
 	}, []);
 	return {
 		list,
