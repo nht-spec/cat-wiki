@@ -1,0 +1,18 @@
+.skeletion-control-info {
+	width: 601px;
+	margin-top: 41px;
+	margin-left: 115px;
+	.steletion-list-info {
+		.skeletion {
+			margin-bottom: 32px;
+		}
+	}
+}
+@media all and (max-width: 768px) {
+	.skeletion-control-info {
+		width: 100%;
+		margin: auto;
+		padding: 0 18px;
+		margin-top: 20px;
+	}
+}

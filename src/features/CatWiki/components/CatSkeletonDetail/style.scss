@@ -1,0 +1,23 @@
+.skeletion-control-detail {
+	margin: 40px 0 0 149px;
+	.skeletion-list-detail {
+		.skeletion {
+			width: 371.04px;
+			height: 371.04px;
+			border-radius: 24px;
+		}
+	}
+}
+@media all and (max-width: 768px) {
+	.skeletion-control-detail {
+		margin: auto;
+		width: 100%;
+		padding: 0 18px;
+	}
+	.skeletion-list-detail {
+		.skeletion {
+			width: 100% !important;
+			border-radius: 24px;
+		}
+	}
+}

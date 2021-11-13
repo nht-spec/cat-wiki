@@ -10,8 +10,8 @@ export default function useCatImage(imageId) {
 			setLoading(true);
 			const result = await catApi.getImage(imageId);
 			setImageCat(result);
+			setLoading(false);
 		})();
-		setLoading(false);
 	}, [imageId]);
 
 	return {
