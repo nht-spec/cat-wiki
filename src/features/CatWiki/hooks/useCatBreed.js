@@ -9,8 +9,8 @@ export default function useCatBreed() {
 			setLoading(true);
 			const result = await catApi.getAllBreed();
 			setBreed(result);
+			setLoading(false);
 		})();
-		setLoading(false);
 	}, []);
 	return { breed, loading };
 }

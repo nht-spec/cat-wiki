@@ -5,7 +5,7 @@ import useCatBreed from '../../hooks/useCatBreed';
 import SearchDialogMobile from '../SearchDialogMobile/SearchDialogMobile';
 import './style.scss';
 
-function Search({ valueOfBreed }) {
+function Search({ valueOfBreed, Loading }) {
 	const [placeholder, setPlaceHolder] = useState('Enter your breed');
 	const [isChange, setIsChange] = useState(false);
 	const [valueOfInput, setValueOfInput] = useState('');
@@ -13,7 +13,7 @@ function Search({ valueOfBreed }) {
 	const [isForcus, setIsForcus] = useState(false);
 	const [isClose, setIsClose] = useState(false);
 	const history = useHistory();
-	const { breed } = useCatBreed();
+	const { breed, loading } = useCatBreed();
 
 	const handlechange = (value) => {
 		setValueOfInput(value);
@@ -24,6 +24,9 @@ function Search({ valueOfBreed }) {
 	const hanleClick = (id, imageId) => {
 		history.push(`/cat/${id}/${imageId}`);
 	};
+	useEffect(() => {
+		Loading && Loading(loading);
+	}, [loading, Loading]);
 
 	useEffect(() => {
 		let sortValue = [];

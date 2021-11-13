@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import Search from '../../features/CatWiki/components/Search/Search';
-import './style.scss';
-import './backgroudcat.png';
-import DiscoverBreed from '../../features/CatWiki/components/DiscoverBreed/DiscoverBreed';
 import Benefits from '../../features/CatWiki/components/Benefits/Benefits';
+import DiscoverBreed from '../../features/CatWiki/components/DiscoverBreed/DiscoverBreed';
+import Search from '../../features/CatWiki/components/Search/Search';
+import './backgroudcat.png';
+import './style.scss';
 Content.propTypes = {};
 
 function Content() {
 	const [valueOfBreed, setValueOfBreed] = useState([]);
+	const [loading, setLoading] = useState(false);
 
 	return (
 		<div className='content-control'>
@@ -23,11 +24,12 @@ function Content() {
 					<p className='text-content-dec'>
 						Get to know more about your cat breed
 					</p>
-					<Search valueOfBreed={setValueOfBreed} />
+					<Search Loading={setLoading} valueOfBreed={setValueOfBreed} />
 				</div>
 				<div className='backgroud-image' />
 			</div>
-			<DiscoverBreed valueOfBreed={valueOfBreed} />
+
+			<DiscoverBreed loading={loading} valueOfBreed={valueOfBreed} />
 			<Benefits />
 		</div>
 	);
