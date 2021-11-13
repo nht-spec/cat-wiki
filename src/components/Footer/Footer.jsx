@@ -4,7 +4,7 @@ import './style.scss';
 Footer.propTypes = {};
 
 function Footer() {
-	const { scrollX, scrollY, scrollDirection } = useScroll();
+	const { scrollDirection } = useScroll();
 	const styles = {
 		active: {
 			transition: 'transform ease-in-out 0.8s',

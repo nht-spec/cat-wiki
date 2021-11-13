@@ -16,7 +16,6 @@ export function useScroll() {
 		setScrollDirection(lastScrollTop > -bodyOffset.top ? 'down' : 'up');
 		setLastScrollTop(-bodyOffset.top);
 	};
-	console.log(-bodyOffset.top);
 
 	useEffect(() => {
 		window.addEventListener('scroll', listener);
