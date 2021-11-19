@@ -7,7 +7,6 @@ import './style.scss';
 
 function Search({ valueOfBreed, Loading }) {
 	const [placeholder, setPlaceHolder] = useState('Enter your breed');
-	const [isChange, setIsChange] = useState(false);
 	const [valueOfInput, setValueOfInput] = useState('');
 	const [newListOfSort, setNewListOfSort] = useState([]);
 	const [isForcus, setIsForcus] = useState(false);
@@ -17,13 +16,12 @@ function Search({ valueOfBreed, Loading }) {
 
 	const handlechange = (value) => {
 		setValueOfInput(value);
-		value && setIsChange(true);
-		!value && setIsChange(false);
 	};
 
 	const hanleClick = (id, imageId) => {
 		history.push(`/cat/${id}/${imageId}`);
 	};
+
 	useEffect(() => {
 		Loading && Loading(loading);
 	}, [loading, Loading]);
@@ -68,7 +66,7 @@ function Search({ valueOfBreed, Loading }) {
 					</div>
 
 					<div className='option-name-list'>
-						{isChange &&
+						{isForcus &&
 							newListOfSort.map((list) => (
 								<ul
 									onClick={() => hanleClick(list.id, list.reference_image_id)}
@@ -78,6 +76,7 @@ function Search({ valueOfBreed, Loading }) {
 									<li className='name-text'>{list.name}</li>
 								</ul>
 							))}
+
 						{valueOfInput && newListOfSort.length === 0 && (
 							<p className='name-text-notfault'>No results found!!</p>
 						)}

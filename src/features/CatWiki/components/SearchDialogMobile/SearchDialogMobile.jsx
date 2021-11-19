@@ -8,9 +8,9 @@ import { useHistory } from 'react-router';
 import InputField from '../../../../components/formControl/InputField/InputField';
 import useCatBreed from '../../hooks/useCatBreed';
 import './style.scss';
+
 function SearchDialogMobile() {
 	const [placeholder, setPlaceHolder] = useState('Enter your breed');
-	const [isChange, setIsChange] = useState(false);
 	const [valueOfInput, setValueOfInput] = useState('');
 	const [newListOfSort, setNewListOfSort] = useState([]);
 	const [isForcus, setIsForcus] = useState(false);
@@ -22,8 +22,6 @@ function SearchDialogMobile() {
 	};
 	const handlechange = (value) => {
 		setValueOfInput(value);
-		value && setIsChange(true);
-		!value && setIsChange(false);
 	};
 
 	useEffect(() => {
@@ -90,7 +88,7 @@ function SearchDialogMobile() {
 							</div>
 
 							<div className='option-name-list-mobile'>
-								{isChange &&
+								{isForcus &&
 									newListOfSort.map((list) => (
 										<div
 											onClick={() =>

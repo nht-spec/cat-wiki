@@ -9,6 +9,7 @@ InputField.propTypes = {
 function InputField({ placeholder, handlechange, handleclick, IsForcus }) {
 	const [isClick, setIsClick] = useState(false);
 	const [isForcus, setIsForcus] = useState(false);
+
 	const handleChange = (value) => {
 		const name = value.target.value;
 		handlechange && handlechange(name);

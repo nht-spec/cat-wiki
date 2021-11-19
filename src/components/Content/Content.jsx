@@ -4,7 +4,6 @@ import DiscoverBreed from '../../features/CatWiki/components/DiscoverBreed/Disco
 import Search from '../../features/CatWiki/components/Search/Search';
 import './backgroudcat.png';
 import './style.scss';
-Content.propTypes = {};
 
 function Content() {
 	const [valueOfBreed, setValueOfBreed] = useState([]);
