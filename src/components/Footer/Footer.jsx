@@ -1,7 +1,6 @@
 import React from 'react';
 import { useScroll } from '../../features/CatWiki/hooks/useScroll';
 import './style.scss';
-Footer.propTypes = {};
 
 function Footer() {
 	const { scrollDirection } = useScroll();
